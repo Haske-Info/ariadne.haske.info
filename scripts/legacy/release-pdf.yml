@@ -1,0 +1,73 @@
+name: Build and Release Resume PDF
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install latest mdbook
+        run: |
+          tag=$(curl 'https://api.github.com/repos/rust-lang/mdbook/releases/latest' | jq -r '.tag_name')
+          url="https://github.com/rust-lang/mdbook/releases/download/${tag}/mdbook-${tag}-x86_64-unknown-linux-gnu.tar.gz"
+          mkdir mdbook
+          curl -sSL $url | tar -xz --directory=./mdbook
+          echo `pwd`/mdbook >> $GITHUB_PATH
+      - name: Install latest mdbook-gitinfo
+        run: |
+          curl -fsSLO https://github.com/CompEng0001/mdbook-gitinfo/releases/latest/download/mdbook-gitinfo-linux.tar.gz
+          tar -xzf mdbook-gitinfo-linux.tar.gz
+          mv mdbook-gitinfo-linux ~/.cargo/bin/mdbook-gitinfo
+      - name: Build Book
+        run: mdbook build
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install chromium --with-deps
+      - name: Print resume to PDF
+        run: |
+          python3 - <<'EOF'
+          from playwright.sync_api import sync_playwright
+          import os
+          with sync_playwright() as p:
+              browser = p.chromium.launch()
+              page = browser.new_page()
+              page.goto(f"file://{os.getcwd()}/book/print.html")
+              page.wait_for_load_state("networkidle")
+              page.pdf(
+                  path="resume.pdf",
+                  format="A4",
+                  print_background=True,
+                  margin={"top": "1cm", "bottom": "1cm", "left": "1cm", "right": "1cm"}
+              )
+              browser.close()
+          EOF
+      - name: Merge PDFs
+        run: |
+          pip install pypdf
+          python3 - <<'EOF'
+          from pypdf import PdfWriter, PdfReader
+          import glob, os
+          writer = PdfWriter()
+          for page in PdfReader("resume.pdf").pages:
+              writer.add_page(page)
+          for pdf in sorted(glob.glob("src/recommendations/*.pdf")):
+              print(f"Adding {pdf}")
+              for page in PdfReader(pdf).pages:
+                  writer.add_page(page)
+          with open("ahaske-resume-and-references.pdf", "wb") as f:
+              writer.write(f)
+          EOF
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: resume-latest
+          name: Resume Package
+          files: ahaske-resume-and-references.pdf
+          make_latest: true

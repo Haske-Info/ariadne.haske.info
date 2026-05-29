@@ -1,0 +1,28 @@
+[book]
+title = "Network Troubleshooter"
+description = "Network troubleshooting as art. 10+ years at Cisco, mostly in Customer facing network support roles. Emphasis on IOS/XR, WAN, IOS-XE, and Wireless technologies."
+
+[output.html]
+no-section-label = true
+cname = "ariadne.haske.org"
+git-repository-url = "https://github.com/Haske-org/ariadne-website"
+
+[preprocessor.gitinfo]
+enable = true
+
+# choose placement(s)
+header = false   # default: false
+footer = true    # default: true
+
+# common formatting
+font-size   = "0.9em"
+separator   = " • "
+date-format = "%Y-%m-%d"
+time-format = "%H:%M:%S"
+hyperlink   = true  # make hash/branch clickable when possible
+
+# optional timezone handling
+timezone = "utc"   # "local" (default) | "utc" | "source" | "fixed:+02:00"
+
+[preprocessor.gitinfo.message]
+footer = "Built {{date}}{{sep}}commit: {{hash}}"

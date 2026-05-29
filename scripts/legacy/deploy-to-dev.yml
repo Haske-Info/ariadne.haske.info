@@ -1,0 +1,37 @@
+name: Deploy to Dev
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install latest mdbook
+        run: |
+          tag=$(curl 'https://api.github.com/repos/rust-lang/mdbook/releases/latest' | jq -r '.tag_name')
+          url="https://github.com/rust-lang/mdbook/releases/download/${tag}/mdbook-${tag}-x86_64-unknown-linux-gnu.tar.gz"
+          mkdir mdbook
+          curl -sSL $url | tar -xz --directory=./mdbook
+          echo `pwd`/mdbook >> $GITHUB_PATH
+      - name: Install latest mdbook-gitinfo
+        run: |
+          curl -fsSLO https://github.com/CompEng0001/mdbook-gitinfo/releases/latest/download/mdbook-gitinfo-linux.tar.gz
+          tar -xzf mdbook-gitinfo-linux.tar.gz
+          mv mdbook-gitinfo-linux ~/.cargo/bin/mdbook-gitinfo
+      - name: Build Book
+        run: mdbook build
+      - name: Deploy to gh-pages-dev
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: gh-pages-dev
+          build_dir: book
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
