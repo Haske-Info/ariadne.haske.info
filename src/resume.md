@@ -7,7 +7,8 @@ Tier 3 network engineer. 13 years across Cisco in TAC and HTTS roles — IOS, IO
 ### Technical Consulting Engineer - HTTS
 
 **TEKSystems**
-* Contract with Cisco
+
+- Contract with Cisco
 
 May 2024 – Mar 2026
 
@@ -24,8 +25,9 @@ Provided Tier 3 technical support for public sector and enterprise customers acr
 ### Network Engineer
 
 **GDH**
-* Contract with Cisco
-* Contract with Bank of America
+
+- Contract with Cisco
+- Contract with Bank of America
 
 Feb 2021 – May 2024
 
@@ -84,7 +86,7 @@ Owned cases end-to-end: reproducing complex faults, filing bugs, engaging escala
 
 **Otterbase**
 
-* Contract with Bronson Healthcare Group
+- Contract with Bronson Healthcare Group
 
 Feb 2012 – Jul 2012
 
@@ -99,48 +101,36 @@ Also assisted the broader network team with fiber cross connects for redundancy,
 ## Education
 
 ### Davenport University
-* Bachelor of Science
-* Computer Networking — Cisco Specialty
-* Grand Rapids, Michigan
-* Graduated 2012
+- Bachelor of Science
+- Computer Networking — Cisco Specialty
+- Grand Rapids, Michigan
+- Graduated 2012
 
 Activities: Collegiate Cyber Defense Competition
 
 ### Kalamazoo Valley Community College
-* Associates
-* Computer Information Systems
-* Kalamazoo, MI
-* Graduated 2009
+- Associates
+- Computer Information Systems
+- Kalamazoo, MI
+- Graduated 2009
 
 ## Licenses & Certifications
 
-### Cisco Certified Network Associate (CCNA)
-* Issued Aug 2011
-* Credential CSCO11892490
-
-### Cisco IOS XR Specialist
-* Issued Jun 2013
-* Credential CSCO11892490
-
-### Cisco Certified Network Professional (CCNP Route/Switch)
-* Issued Dec 2013
-* Credential CSCO11892490
-
-### Cisco Certified Design Associate (CCDA)
-* Issued Jan 2015
-* Credential CSCO11892490
+## CCNP Enterprise
+- Issued June 2026
+- [Verify](https://cp.certmetrics.com/cisco/en/public/verify/credential/DGBPG4NEDZP6VCH2)
 
 ### PADI Mermaid
-* Issued May 2025
-* Credential #25050R2474
+- Issued May 2025
+- Credential #25050R2474
 
 ### PFI Freediver (SDI)
-* Issued Aug 2025
-* Credential #1741064 
+- Issued Aug 2025
+- Credential #1741064 
 
 ## Other works
 
-[ariadne.network-notes.info](https://ariadne.network-notes.info/) - My Network studying notes.
+[PushPopSwap.com](https://pushpopswap.com) - My Network Study Notes.
 
 [sitwithariadne.com](https://sitwithariadne.com) - This is a meditation and mindfulness peer-support blog.
 
@@ -150,19 +140,16 @@ Activities: Collegiate Cyber Defense Competition
 
 **Email:** ariadne.haske@gmail.com
 
-**LinkedIn:** https://www.linkedin.com/in/ariadnehaske/
+**LinkedIn:** <https://www.linkedin.com/in/ariadnehaske/>
 
 ## License - Attribution
 
-This resume is hosted on [github](https://github.com/Haske-org/ariadne-website)
+This resume is hosted on [Gitub].
+
+[github]: https://github.com/Haske-org/ariadne-website
 
 There is a lot of CI/CD magic using [mdBook](https://rust-lang.github.io/mdBook/) and PDF merge (via python, playwrite, and chromium) to build this site/resume. 
 
 All of it can be cloned or fork'd, the license is [Unlicensed](https://github.com/Haske-Info/resume-ariadne/blob/main/LICENSE). 
 
 The companies I've worked for of course own their respective logos, and other properties.
-
----
-
-v3.2 - Ariadne Haske
-
