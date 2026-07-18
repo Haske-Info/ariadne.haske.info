@@ -1,9 +1,15 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
   <diagram name="Page-1" id="eTh3aw0WYXCbbovTG8zj">
-    <mxGraphModel dx="410" dy="256" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="0" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0" adaptiveColors="none">
+    <mxGraphModel dx="199" dy="124" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="0" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0" adaptiveColors="none">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="_JirmGMsUVTkLj-to8Ry-4" edge="1" parent="1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;strokeWidth=3;elbow=vertical;fillColor=#d5e8d4;strokeColor=#82b366;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="222.65" y="761.92" as="sourcePoint" />
+            <mxPoint x="286" y="762" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="NO0hMIeCVV5FIhQQeRoq-46" edge="1" parent="1" source="lbnmV9Moz0TXLxYADeuH-9" style="shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#6c8ebf;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;fillColor=#dae8fc;elbow=vertical;edgeStyle=orthogonalEdgeStyle;" target="CqTmTN9_2uuaHgkpDne7-33">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -416,14 +422,14 @@
         <mxCell id="NICzeJytbfNPou0eU094-1" parent="1" style="text;html=1;fontColor=default;whiteSpace=wrap;" value="&lt;span style=&quot;forced-color-adjust: none; font-size: 8px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-family: Verdana;&quot;&gt;&lt;b style=&quot;forced-color-adjust: none;&quot;&gt;&lt;font style=&quot;forced-color-adjust: none; color: rgb(153, 153, 153);&quot;&gt;NAS - Storage / Prod Backup&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;div style=&quot;forced-color-adjust: none; font-family: Helvetica; font-size: 8px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;forced-color-adjust: none; color: rgb(153, 153, 153);&quot;&gt;Xeon E5-2697 (18C, 36T, 64GB)&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="46" width="141" x="672.25" y="244" as="geometry" />
         </mxCell>
-        <mxCell id="FycOZxUXVsV3mBZOf21n-1" edge="1" parent="1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;strokeWidth=3;elbow=vertical;fillColor=#d5e8d4;strokeColor=#82b366;">
+        <mxCell id="FycOZxUXVsV3mBZOf21n-1" edge="1" parent="1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;strokeWidth=3;elbow=vertical;fillColor=#d5e8d4;strokeColor=#82b366;entryX=-0.006;entryY=0.427;entryDx=0;entryDy=0;entryPerimeter=0;" target="FycOZxUXVsV3mBZOf21n-2">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="93" y="761" as="sourcePoint" />
             <mxPoint x="285.79999999999995" y="761" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <object label="2.5G Copper" placeholders="1" id="FycOZxUXVsV3mBZOf21n-2">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#808080;fontSize=8;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=default;fontColor=#808080;" vertex="1">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#808080;fontSize=8;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=none;fontColor=#808080;" vertex="1">
             <mxGeometry height="16" width="62.8" x="159.89999999999998" y="754" as="geometry" />
           </mxCell>
         </object>
